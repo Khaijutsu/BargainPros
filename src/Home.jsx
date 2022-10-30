@@ -1,8 +1,13 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Item from './Item';
+import Filter from './Filter';
+
+
 const Home = () => {
   const [item, setItem] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+  const [activeEmotion, setActiveEmotion] = useState(0);
 
   useEffect(() => {
     fetchShopList();
@@ -11,8 +16,9 @@ const Home = () => {
   const fetchShopList = async () => {
     const data = await fetch("https://fakestoreapi.com/products");
     const shops = await data.json();
-    console.log(shops)
+    console.log(shops);
     setItem(shops);
+    setFiltered(shops);
   }
 
   // fetch('https://fakestoreapi.com/products?limit=5')
@@ -26,16 +32,12 @@ const Home = () => {
       </div>
       <div className='filter-section'>
         <h3>Emotion Filter</h3>
-        <input type="checkbox" id="feeling-1" />
-        <label for="feeling-1">Cold</label>
-        <input type="checkbox" id="feeling-2" />
-        <label for="feeling-2">Rich</label>
-        <input type="checkbox" id="feeling-3" />
-        <label for="feeling-3">Techy</label>
+        <Filter item={item} setFiltered={setFiltered} activeEmotion={activeEmotion} setActiveEmotion={setActiveEmotion}/>
+        
       </div>
       <div className='displayed-items'>
-        {item.map((product) => {
-          return <Item key={product.id} product={product}/>
+        {filtered.map((product) => {
+          return <Item key={product.id} product={product} />
         })}
       </div>
     </div>
