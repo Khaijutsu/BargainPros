@@ -31,7 +31,7 @@ const Home = () => {
         <input></input>
       </div>
       <div className='filter-section'>
-        <h3>Emotion Filter</h3>
+        <h3>Category Filter</h3>
         <Filter item={item} setFiltered={setFiltered} activeEmotion={activeEmotion} setActiveEmotion={setActiveEmotion}/>
         
       </div>
