@@ -3,6 +3,7 @@ import Home from "./Home";
 import Deals from "./Deals";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Contact from "./Contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Deals" element={<Deals />} />
+            <Route path="/Contact" element={<Contact />}/>
           </Routes>
         </div>
         <Footer />
