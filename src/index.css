@@ -123,7 +123,15 @@
 
 /* Deals Section */
 
+.deals-content{
+  filter: brightness(50%);
+}
+
 .deals-title {
   margin-top: 10px;
   text-align:center;
+}
+
+.deals-paragraph{
+  font-size: 180%;
 }
