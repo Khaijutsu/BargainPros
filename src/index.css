@@ -6,6 +6,16 @@
   font-family: "Quicksand";
   color: #333;
 }
+
+
+.screen-format {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+
 .navbar {
   display: flex;
   align-items: center;
@@ -120,8 +130,7 @@ button.active {
 
 .bottom-container {
   background-color: #393e46;
- 
-       
+  margin-top: auto;
   height: 70px;
   padding: 6px 50px;
 }

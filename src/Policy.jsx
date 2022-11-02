@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Deals = () => {
+const Policy = () => {
   return (
     <div className = 'deals-content'>
       <div className = 'deals-policy-title'>
@@ -19,4 +19,4 @@ const Deals = () => {
   )
 }
 
-export default Deals
+export default Policy

@@ -14,9 +14,9 @@ function Filter( {setActiveEmotion, activeEmotion, setFiltered, item} ) {
   
   return (
     <div className='filter-container'>
-      <button onClick={() => setActiveEmotion("clothing")}>Cold</button>
-      <button onClick={() => setActiveEmotion("jewelery")}>Rich </button>
-      <button onClick={() => setActiveEmotion("electronics")}>Techy</button>
+      <button onClick={() => setActiveEmotion("clothing")}>Clothing</button>
+      <button onClick={() => setActiveEmotion("jewelery")}>Jewelery </button>
+      <button onClick={() => setActiveEmotion("electronics")}>Electronics</button>
     </div>
   )
 }
